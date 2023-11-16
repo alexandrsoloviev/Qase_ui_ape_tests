@@ -4,7 +4,7 @@ import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({"system:properties",
-        "classpath:config/project-browser_local.properties"})
+        "classpath:config/project-browser_selenoid.properties"})
 public interface ProjectConfig extends Config {
     @DefaultValue("browser_local")
     String runIn();
