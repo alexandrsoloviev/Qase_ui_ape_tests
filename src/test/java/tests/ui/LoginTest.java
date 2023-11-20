@@ -17,7 +17,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 @Tag("UI")
-@Epic("UI")
+@Epic("Login")
 @Feature("Login")
 @Owner("alexandrsoloviev")
 public class LoginTest extends TestBase {

@@ -14,7 +14,7 @@ import tests.api.pojos.request.suite.CreateSuiteRequest;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 @Tag("UI")
-@Epic("UI")
+@Epic("Suite")
 @Feature("Suite")
 @Owner("alexandrsoloviev")
 public class SuiteTest extends TestBase {

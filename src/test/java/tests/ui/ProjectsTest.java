@@ -17,7 +17,7 @@ import static io.qameta.allure.Allure.step;
 
 
 @Tag("UI")
-@Epic("UI")
+@Epic("Project")
 @Feature("Project")
 @Owner("alexandrsoloviev")
 public class ProjectsTest extends TestBase {
