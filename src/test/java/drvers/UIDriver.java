@@ -18,6 +18,7 @@ public class UIDriver {
         Configuration.browserSize = Project.config.browserSize();
         Configuration.baseUrl = Project.config.baseUrl();
         Configuration.browser = Project.config.browser();
+        Configuration.timeout = 5000;
         MutableCapabilities capabilities = new DesiredCapabilities();
         if (isRemoteDriver()) {
             Configuration.remote = Project.config.remoteDriver();

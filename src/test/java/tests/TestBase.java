@@ -6,6 +6,7 @@ import config.Project;
 
 import drvers.UIDriver;
 import helpers.generators.ProjectGenerator;
+import helpers.generators.SuiteGenerator;
 import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -15,6 +16,7 @@ import tests.api.pojos.request.project.CreateProjectRequest;
 import tests.api.steps.ProjectSteps;
 import tests.ui.pages.LoginPage;
 import tests.ui.pages.ProjectsPage;
+import tests.ui.pages.SuitePage;
 
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
@@ -24,7 +26,9 @@ import static helpers.Attachments.*;
 public class TestBase {
    protected LoginPage loginPage = new LoginPage();
    protected ProjectsPage projectsPage = new ProjectsPage();
+   protected SuitePage suitePage = new SuitePage();
    protected   ProjectGenerator projectGenerator = new ProjectGenerator();
+   protected SuiteGenerator suiteGenerator = new SuiteGenerator();
 
 
     @BeforeAll

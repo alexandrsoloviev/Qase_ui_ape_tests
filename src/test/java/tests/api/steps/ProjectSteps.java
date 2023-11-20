@@ -1,6 +1,5 @@
 package tests.api.steps;
 
-import com.github.javafaker.Faker;
 import io.qameta.allure.Step;
 import tests.api.pojos.request.project.CreateProjectRequest;
 import tests.api.pojos.response.project.CreateProjectResponse;
@@ -34,14 +33,13 @@ public class ProjectSteps {
                 .extract().as(DeleteProjectResponse.class);
     }
 
-    @Step("Get list projects code")
-    public static List<EntitiesItem> getListProjectCodes() {
+    @Step("Get list projects entities")
+    public static List<EntitiesItem> getListProjectEntities() {
         return given()
                 .spec(REQ_SPEC)
                 .get(path)
                 .then().spec(RES_SPEC)
                 .extract().jsonPath().getList("result.entities", EntitiesItem.class);
     }
-
 
 }

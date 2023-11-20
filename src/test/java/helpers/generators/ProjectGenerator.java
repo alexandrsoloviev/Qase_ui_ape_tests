@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import lombok.Data;
 import tests.api.pojos.request.project.CreateProjectRequest;
 import tests.api.steps.ProjectSteps;
+
 @Data
 public class ProjectGenerator {
 
@@ -29,8 +30,6 @@ public class ProjectGenerator {
                 .access("Add all members to this project")
                 .build();
     }
-
-
     public  void createProject(){
         ProjectSteps.createProject(creteProjectRq);
     }

@@ -12,7 +12,9 @@ import org.junit.jupiter.api.Test;
 import tests.TestBase;
 import tests.api.pojos.request.project.CreateProjectRequest;
 
+
 import static io.qameta.allure.Allure.step;
+
 
 @Tag("UI")
 @Epic("UI")
@@ -22,10 +24,7 @@ public class ProjectsTest extends TestBase {
 
     @BeforeEach
     void openProjectsPage() {
-
-        step("Authorize in app", () -> {
-            authorizeInApp();
-        });
+        step("Authorize in app", this::authorizeInApp);
     }
 
     @Test
@@ -46,6 +45,7 @@ public class ProjectsTest extends TestBase {
         step("Post-condition : delete project", () -> {
             projectGenerator.deleteProject(project.getCode());
         });
+
     }
 
     @Test
@@ -84,6 +84,5 @@ public class ProjectsTest extends TestBase {
                     .checkThatTheProjectHasBeenNotFound(projectGenerator.getCreteProjectRq().getTitle());
         });
     }
-
 
 }

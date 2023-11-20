@@ -19,7 +19,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @Tag("API")
 @Epic("API")
-@Feature("SUITE")
+@Feature("PROJECT")
 @Owner("alexandrsoloviev")
 public class ProjectApiTest {
 
@@ -46,7 +46,7 @@ public class ProjectApiTest {
 
         ProjectSteps.deleteProject(creteProjectRq.getCode());
 
-        List<EntitiesItem> listProjectsCode = ProjectSteps.getListProjectCodes();
+        List<EntitiesItem> listProjectsCode = ProjectSteps.getListProjectEntities();
 
         assertThat(listProjectsCode)
                 .extracting(EntitiesItem::getCode)
