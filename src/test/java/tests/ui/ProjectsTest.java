@@ -74,12 +74,12 @@ public class ProjectsTest extends TestBase {
             projectGenerator.createProject();
         });
 
-        step("", () -> {
+        step("Delete project", () -> {
             projectsPage.openProjectPage();
             projectsPage.deleteProject(projectGenerator.getCreteProjectRq().getTitle());
         });
 
-        step("", () -> {
+        step("Validate result", () -> {
             projectsPage.inputValueIntoSearchInput(projectGenerator.getCreteProjectRq().getTitle())
                     .checkThatTheProjectHasBeenNotFound(projectGenerator.getCreteProjectRq().getTitle());
         });

@@ -37,20 +37,7 @@ public class Attachments {
                 String.join("\n", Selenide.getWebDriverLogs(BROWSER))
         );
     }
-
-//    @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
-//    public static String videoBrowserstack(String sessionId) {
-//        return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
-//                + Browserstack.videoUrl(sessionId)
-//                + "' type='video/mp4'></video></body></html>";
-//    }
-//
-//    @Attachment(value = "Browserstack full info link", type = "text/html", fileExtension = ".html")
-//    public static String browserstackFullInfoLink(String sessionId) {
-//        return "<html><body><a href='"
-//                + Browserstack.fullInfoPublicUrl(sessionId)
-//                + "'>Full info link</a></body></html>";
-//    }
+    
 
     @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
     public static String videoSelenoid(String sessionId) {
@@ -60,7 +47,7 @@ public class Attachments {
     }
 
     private static URL getVideoUrl(String sessionId) {
-        String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId + ".mp4";
+        String videoUrl = "http://localhost:4445/video/" + sessionId + ".mp4";
 
         try {
             return new URL(videoUrl);
