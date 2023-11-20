@@ -23,6 +23,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Epic("API")
 @Feature("CASE")
 @Owner("alexandrsoloviev")
+@DisplayName("Case API tests")
 public class CaseApiTest {
     CreateProjectRequest projectRq = ProjectGenerator.createProjectApi();
     @BeforeEach
