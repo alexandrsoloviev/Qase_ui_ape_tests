@@ -17,6 +17,7 @@ import static io.qameta.allure.Allure.step;
 @Epic("Suite")
 @Feature("Suite")
 @Owner("alexandrsoloviev")
+@DisplayName("Suite UI tests")
 public class SuiteTest extends TestBase {
 
     @BeforeEach
@@ -30,13 +31,9 @@ public class SuiteTest extends TestBase {
 
         CreateSuiteRequest suite = SuiteGenerator.createSuiteUI();
 
-        step("Pre-condition : create project", () -> {
-            projectGenerator.createProject();
-        });
+        step("Pre-condition : create project", () -> projectGenerator.createProject());
 
-        step("Open project", () -> {
-            open("/project/" + projectGenerator.getCreteProjectRq().getCode());
-        });
+        step("Open project", () -> open("/project/" + projectGenerator.getCreteProjectRq().getCode()));
 
         step("Create suite", () -> {
             suitePage.clickCreateNewSuiteButton()

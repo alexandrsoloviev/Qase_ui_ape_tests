@@ -19,6 +19,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Epic("API")
 @Feature("SUITE")
 @Owner("alexandrsoloviev")
+@DisplayName("Suite API tests")
 public class SuiteApiTest {
     CreateProjectRequest projectRq = ProjectGenerator.createProjectApi();
 

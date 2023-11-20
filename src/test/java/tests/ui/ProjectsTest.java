@@ -20,6 +20,7 @@ import static io.qameta.allure.Allure.step;
 @Epic("Project")
 @Feature("Project")
 @Owner("alexandrsoloviev")
+@DisplayName("Project UI tests")
 public class ProjectsTest extends TestBase {
 
     @BeforeEach

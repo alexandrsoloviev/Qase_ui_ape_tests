@@ -20,6 +20,7 @@ import static io.qameta.allure.Allure.step;
 @Epic("Login")
 @Feature("Login")
 @Owner("alexandrsoloviev")
+@DisplayName("Login UI tests")
 public class LoginTest extends TestBase {
 
 

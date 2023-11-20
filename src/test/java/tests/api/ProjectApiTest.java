@@ -21,6 +21,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Epic("API")
 @Feature("PROJECT")
 @Owner("alexandrsoloviev")
+@DisplayName("Project API tests")
 public class ProjectApiTest {
 
     @Test
