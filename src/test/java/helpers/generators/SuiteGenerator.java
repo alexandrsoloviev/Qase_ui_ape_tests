@@ -12,7 +12,7 @@ public class SuiteGenerator {
 
     public static CreateSuiteRequest createSuiteApi() {
         return CreateSuiteRequest.builder()
-                .title(faker.beer().name().replace("'", ""))
+                .title(faker.beer().name())
                 .description(faker.chuckNorris().fact())
                 .preconditions(faker.chuckNorris().fact())
                 .build();
@@ -20,7 +20,7 @@ public class SuiteGenerator {
 
     public static CreateSuiteRequest createSuiteUI() {
         return CreateSuiteRequest.builder()
-                .title(faker.funnyName().name().replace("'", ""))
+                .title(faker.name().firstName())
                 .description(faker.chuckNorris().fact())
                 .preconditions(faker.chuckNorris().fact())
                 .build();

@@ -14,8 +14,8 @@ public class ProjectGenerator {
 
     public static CreateProjectRequest createProjectApi() {
         return CreateProjectRequest.builder()
-                .title(faker.funnyName().name().replace("'", ""))
-                .code(faker.name().firstName().toUpperCase().replace("'", ""))
+                .title(faker.name().firstName())
+                .code(faker.name().firstName().toUpperCase())
                 .description(faker.chuckNorris().fact())
                 .access("all")
                 .build();
@@ -23,8 +23,8 @@ public class ProjectGenerator {
 
     public static CreateProjectRequest createProjectUI() {
         return CreateProjectRequest.builder()
-                .title(faker.funnyName().name().replace("'", ""))
-                .code(faker.name().firstName().toUpperCase().replace("'", ""))
+                .title(faker.name().firstName())
+                .code(faker.name().firstName().toUpperCase())
                 .description(faker.chuckNorris().fact())
                 .group("Public")
                 .access("Add all members to this project")
