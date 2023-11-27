@@ -2,7 +2,6 @@
 ![qase_logo.png](images/icons/qase-share.png)
 > Qase is a modern test management platform for manual + automated QA testing,\
 > tracking, and reporting that helps deliver higher quality software, faster.
-# <a name="TableOfContents">Table of contents</a>
 
  # <a name="Description">Description</a>
 The test project consists of UI, API and mobile(android) tests.\
@@ -17,7 +16,6 @@ A brief list of interesting facts about the project:
 - [x] Objects serialization/deserialization for API requests/responses using `Jackson`
 - [x] Using request/response specifications for API tests
 - [x] Custom Allure listener for beautiful API requests/responses logging
-- [x] `Allure TestOps` integration
 - [x] Autotests as test documentation
 - [x] Parallel execution
 
