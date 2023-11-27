@@ -184,3 +184,10 @@ Also additional test artifacts are available:
 <p align="left">
   <img src="images/screens/AllureReportSuites2.png" alt="AllureReportSuites2" width="950">
 </p>
+
+# <a name="Video">Video of running tests</a>
+
+
+https://github.com/alexandrsoloviev/Qase_ui_api_tests/assets/82815612/22752266-9c47-486d-8d18-cfc9146f173e
+
+
