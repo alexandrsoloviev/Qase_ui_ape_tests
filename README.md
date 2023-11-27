@@ -1,9 +1,10 @@
 # Test automation project for service [QASE](https://app.qase.io/)
-![Bookmate_logo.png](images/icons/qase-share.png)
+![qase_logo.png](images/icons/qase-share.png)
 > Qase is a modern test management platform for manual + automated QA testing,\
 > tracking, and reporting that helps deliver higher quality software, faster.
-> 
-> # <a name="Description">Description</a>
+# <a name="TableOfContents">Table of contents</a>
+
+ # <a name="Description">Description</a>
 The test project consists of UI, API and mobile(android) tests.\
 A brief list of interesting facts about the project:
 - [x] `Page Object` with steps using `Chain of Invocations`
@@ -44,7 +45,7 @@ The autotests in this project are written in `Java` using `Selenide` framework.\
 `Selenoid` - to remote launching browsers in `Docker` containers.\
 `Allure Report` - for test results visualisation.\
 `Telegram Bot` - for test results notifications.\
-`Allure TestOps` - as Test Management System.
+
 
 # <a name="HowToRun">How to run</a>
 
@@ -122,7 +123,64 @@ browserSize=
 
 </details>
 
+## <a name="RunInJenkins">Run in [Jenkins](http://localhost:8080/job/qase/)</a>
+Main page of the build:
+<p  align="center">
+<img src="images/screens/jenkins.png" alt="JenkinsBuildMainPage" width="950">
+</p>
+
+A parametrized Jenkins job can be launched with needed ***tag*** and ***runIn***:
+<p  align="center">
+<img src="images/screens/jenkinsParams.gif" alt="JenkinsBuildParameters" width="950">
+</p>
+
+`project-{runIn}.properties` config files are created in the build workspace on start build.
+
+Sensitive information(login names and passwords) is stored in an encrypted form in Jenkins credential storage.\
+And relatively safe transferred to the build by gradle arguments(see [Gradle command](#GradleCommand) section, 'Additional parameters') and it's values masked in the logs.
+
+After the build is done the test results are available in:
+>- <code><strong>*Allure Report*</strong></code>
+
+<p  align="center">
+<img src="images/screens/jenkinsFinishBuild.png" alt="JenkinsFinishedBuild" width="950">
+</p>
+
+# <a name="TelegramNotifications">Telegram Notifications</a>
+Telegram bot sends a brief report to a specified telegram chat by results of each build.
+<p  align="center">
+<img src="images/screens/telegramNotification.png" alt="TelegramNotification" width="550">
+</p>
 
 
 
+# <a name="AllureReport">Test results report in [Allure Report](https://65648130d64029392681ab59--cozy-pavlova-7f67f1.netlify.app/)</a>
 
+## Main page
+Main page of Allure report contains the following blocks:
+
+>- <code><strong>*ALLURE REPORT*</strong></code> - displays date and time of the test, overall number of launched tests, а также диаграмму с указанием процента и количества успешных, упавших и сломавшихся в процессе выполнения тестов
+>- <code><strong>*TREND*</strong></code> - displays trend of running tests for all runs
+>- <code><strong>*SUITES*</strong></code> - displays distribution of tests by suites
+>- <code><strong>*CATEGORIES*</strong></code> - displays distribution of unsuccessful tests by defect types
+<p align="center">
+  <img src="images/screens/AllureReportMain.png" alt="AllureReportMain" width="950">
+</p>
+
+## List of tests with steps and test artefacts
+On the page the list of the tests grouped by suites with status shown for each test.\
+Full info about each test can be shown: tags, severity, duration, detailed steps.
+
+<p align="center">
+  <img src="images/screens/AllureReportSuites.png" alt="AllureReportSuites" width="1150">
+</p>
+
+Also additional test artifacts are available:
+>- Screenshot
+>- Page Source
+>- Video
+>- Browser console log
+
+<p align="left">
+  <img src="images/screens/AllureReportSuites2.png" alt="AllureReportSuites2" width="950">
+</p>
